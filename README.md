@@ -55,9 +55,24 @@ CI is on [Github Actions](https://github.com/ndp/git-cheatsheet/actions).
 
 ## Deploy
 
+### Legacy
 Use FTP to upload to [NDP Software](http://www.ndpsoftware.com/)
 
 Exceptions caught and logged on [Rollbar](https://rollbar.com/ndpsoftware/git-cheatsheet/) (private).
+
+### AWS Deployment
+
+```bash
+rsync --progress -e "ssh -i ~/.ssh/LightsailDefaultKey-us-west-2.pem" ./git-cheatsheet.htm bitnami@52.36.92.53:/home/bitnami/htdocs/
+
+rsync --progress -e "ssh -i ~/.ssh/LightsailDefaultKey-us-west-2.pem" ./git-cheatsheet.html bitnami@52.36.92.53:/home/bitnami/htdocs/
+
+rsync -avcz --progress -e "ssh -i ~/.ssh/LightsailDefaultKey-us-west-2.pem" ./git-cheatsheet bitnami@52.36.92.53:/home/bitnami/htdocs/
+
+rsync -avcz --progress -e "ssh -i ~/.ssh/LightsailDefaultKey-us-west-2.pem" ../agile_methods bitnami@52.36.92.53:/home/bitnami/htdocs/
+
+
+```
 
 ## FAQ
 
