@@ -98,7 +98,6 @@ function selectLoc (id) {
     } else {
       window.location.href = '#loc=' + id + ';'
     }
-    gtag('event', 'select-loc', { category: 'git-cheatsheet', label: id })
   }
 }
 
@@ -121,7 +120,6 @@ function selectCommand (newEl) {
 
   const cmd = showDocsForCmdEl(newEl)
 
-  gtag('event', 'select', { category: 'git-cheatsheet', label: cmd })
 }
 
 const popStateLoc$ = Observable.fromEvent(window, 'popstate')
@@ -273,7 +271,6 @@ nextCmd$
 
 mouseOverDataDoc$.subscribe(function (el) {
   showDocsForElement(el)
-  gtag('event', 'mouseover', { category: 'git-cheatsheet', label: $(el).text() })
 })
 
 function translateLocations (lang) {
@@ -409,7 +406,6 @@ $(function () {
   $('.lang').on('click', function () {
     const newLang = $(this).attr('data-lang')
     cookies.create('lang', newLang)
-    gtag('event', 'lang', { category: 'git-cheatsheet', label: newLang })
 
     lang = onChooseLang(newLang)
   })
