@@ -56,7 +56,11 @@
         },
         "checkout -b x": {
             "cmd": "checkout -b <name of new branch>",
-            "docs": "Create a branch and switch to it"
+            "docs": "Create a branch and switch to it (OLD)."
+        },
+        "switch -c x": {
+          "cmd": "switch --create/-c <branche>",
+          "docs": "Create a branch and switch to it (NEW)."
         },
         "merge x": {
             "cmd": "merge <commit or branch>",

@@ -110,6 +110,13 @@ export const commands = [
     "left":      "workspace",
     "right":     "local_repo",
     "direction": "dn",
+    "key":       "switch -c x",
+    "tags":      "Branching and Merging",
+  },
+  {
+    "left":      "workspace",
+    "right":     "local_repo",
+    "direction": "dn",
     "key":       "merge x",
     "tags":      "Branching and Merging",
   },

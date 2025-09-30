@@ -68,6 +68,10 @@
     },
     "checkout -b x": {
       "cmd": "checkout -b <branche>",
+      "docs": "Crée une nouvelle BRANCHE et se positionne dessus (OLD)."
+    },
+    "switch -c x": {
+      "cmd": "switch --create/-c <branche>",
       "docs": "Crée une nouvelle BRANCHE et se positionne dessus."
     },
     "merge x": {
