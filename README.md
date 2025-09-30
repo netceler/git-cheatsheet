@@ -55,6 +55,20 @@ CI is on [Github Actions](https://github.com/ndp/git-cheatsheet/actions).
 
 ## Deploy
 
+### Create a deployable archive
+
+To build the app and generate a tar.gz archive containing the deployable files, run:
+
+```
+yarn archive
+```
+
+This produces git-cheatsheet-dist.tar.gz at the repository root, including:
+- git-cheatsheet.html
+- git-cheatsheet.htm
+- git-cheatsheet/ (compiled assets and translations)
+- images/
+
 ### Legacy
 Use FTP to upload to [NDP Software](http://www.ndpsoftware.com/)
 

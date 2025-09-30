@@ -13,7 +13,8 @@
     "clean": "rm -f git-cheatsheet/*.map git-cheatsheet/*.js ./git-cheatsheet/styles.css",
     "test": "jasmine spec/*_spec.mjs",
     "start": "npx http-server",
-    "start-docker": "npm run docker-build && npm run docker-run"
+    "start-docker": "npm run docker-build && npm run docker-run",
+    "archive": "npm run build && tar -czf git-cheatsheet-dist.tar.gz git-cheatsheet.html git-cheatsheet.htm git-cheatsheet images"
   },
   "repository": {
     "type": "git",
